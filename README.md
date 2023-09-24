@@ -78,6 +78,8 @@ print(f"Random float between 1.5 and 3.5: {random_uniform}")
 ```
 
 
+
+
 ## How It Works
 ### Camera HotBits Generation
 
@@ -139,6 +141,42 @@ If you're looking to contribute or modify the codebase:
 - `webcam_capture.py`: Manages the webcam functionalities including initialization, frame capture, and resource release.
 - `quantum_random.py`: Mimics the Python random library but uses the stored quantum-generated bits.
 
+```
+HotBits/
+│
+├── README.md
+│   - A comprehensive documentation of the project, explaining its purpose, how it works, and how to use it.
+│
+├── capture_hotbits.py
+│   - A script responsible for capturing frames using the webcam and processing them to generate quantum random numbers (HotBits).
+│
+├── hotbit_storage.py
+│   - Contains logic for storing and retrieving HotBits. Manages the storage directory and file operations related to HotBits.
+│
+├── hotbits_storage/
+│   - Directory where the generated HotBits are stored in JSON files.
+│
+├── logo.png
+│   - Logo or related imagery for the project.
+│
+├── pixel_processor.py
+│   - Contains the `PixelProcessor` class, responsible for processing webcam frames to generate random bits.
+│
+├── quantum_random.py
+│   - Contains the `QuantumRandom` class, which mimics the Python random library but uses quantum-generated bits.
+│
+├── requirements.txt
+│   - Lists all the Python libraries that are required to run the project.
+│
+├── test_quantum_random.py
+│   - Script for testing the functionality and effectiveness of the `QuantumRandom` class.
+│
+├── test_screenshot.png
+│   - A screenshot or related image for testing or documentation purposes.
+│
+└── webcam_capture.py
+    - Contains logic for capturing frames from the webcam.
+```
 
 ## Testing:
 
