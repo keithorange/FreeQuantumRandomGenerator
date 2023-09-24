@@ -11,7 +11,7 @@ HotBits is a quantum random number generator that harnesses the power of quantum
 Clone the repository:
 
 ```bash
-git clone <repository_link>
+git clone https://github.com/keithorange/HotBits.git
 ```
 
 Navigate to the HotBits directory and install the necessary requirements:
@@ -30,8 +30,51 @@ For generating quantum random numbers using the stored HotBits:
 ```python
 from quantum_random import QuantumRandom
 
+# Initialize QuantumRandom
 qr = QuantumRandom()
-random_num = qr.randint(1, 100)  # This will give you a random number between 1 and 100.
+
+# 1. Generate a random integer between two values (inclusive)
+# Similar to random.randint(a, b)
+random_int = qr.randint(1, 100)
+print(f"Random integer between 1 and 100: {random_int}")
+
+# 2. Generate a random number from the specified range with a given step
+# Similar to random.randrange(start, stop, step)
+random_range = qr.randrange(1, 100, 5)
+print(f"Random number between 1 and 100 with step size 5: {random_range}")
+
+# 3. Choose a random element from a sequence
+# Similar to random.choice(seq)
+seq = [10, 20, 30, 40, 50]
+random_choice = qr.choice(seq)
+print(f"Random choice from the sequence: {random_choice}")
+
+# 4. Generate a list of random selections from a sequence
+# Similar to random.choices(seq, k)
+random_choices = qr.choices(seq, k=3)
+print(f"3 Random choices from the sequence: {random_choices}")
+
+# 5. Shuffle a sequence in-place
+# Similar to random.shuffle(seq)
+seq_to_shuffle = [1, 2, 3, 4, 5]
+qr.shuffle(seq_to_shuffle)
+print(f"Shuffled sequence: {seq_to_shuffle}")
+
+# 6. Generate a list of unique elements chosen from the sequence
+# Similar to random.sample(seq, k)
+random_samples = qr.sample(seq, k=2)
+print(f"2 unique random samples from the sequence: {random_samples}")
+
+# 7. Generate a random float between 0 and 1
+# Similar to random.random()
+random_float = qr.random()
+print(f"Random float between 0 and 1: {random_float}")
+
+# 8. Generate a random float between two values
+# Similar to random.uniform(a, b)
+random_uniform = qr.uniform(1.5, 3.5)
+print(f"Random float between 1.5 and 3.5: {random_uniform}")
+
 ```
 
 
